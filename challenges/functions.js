@@ -6,6 +6,13 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
+function consume(param1, param2, callback){ 
+  var same = param1 + param2 +"this is a call back ";
+  callback.push(same);
+}
+
+consume(2, 3);
+
 
 
 /* Step 2: Create several functions to callback with consume();
