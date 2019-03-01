@@ -6,13 +6,6 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-// function consume(param1, param2, callback){ 
-//   var same = param1 + param2 +"this is a call back ";
-//   callback.push(same);
-// }
-
-// consume(2, 3);
-
 function consume(x, y, callback) {
   return callback(x, y);
 }
@@ -29,7 +22,7 @@ function consume(x, y, callback) {
 */
 
 function consume(param1, param2, callbackFunction) {
-  return callbackFunction(param1,param2);
+  console.log(callbackFunction(param1,param2));
 }
 
 function add(a, b) {
@@ -44,19 +37,19 @@ function greeting(firstname,lastname) {
   return `Hello ${firstname} ${lastname}, nice to meet you!`;
 }
 
-
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-console.log(consume(2,2,add)); // 4
-console.log(consume(10,16,multiply)); // 160
-console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+consume(2,2,add); // 4
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-//Because the function has a console.log in it which is calling out an internal function.
-
+console.log(
+  'Because the function has a console.log in it which is calling out an internal function.'
+)
 // Explanation: 
 
 
